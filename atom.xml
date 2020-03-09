@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Flippedyuer&#39;s Blog</title>
+  
+  <subtitle>Jottings</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://flippedyue.github.io/"/>
+  <updated>2020-03-08T22:38:55.909Z</updated>
+  <id>http://flippedyue.github.io/</id>
+  
+  <author>
+    <name>Flippedyuer</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dash—API文档查询利器</title>
+    <link href="http://flippedyue.github.io/2020/01/31/wen-zhang-biao-ti/"/>
+    <id>http://flippedyue.github.io/2020/01/31/wen-zhang-biao-ti/</id>
+    <published>2020-01-31T13:58:02.000Z</published>
+    <updated>2020-03-08T22:38:55.909Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Dash-for-mac&quot;&gt;&lt;a href=&quot;#Dash-for-mac&quot; class=&quot;headerlink&quot; title=&quot;Dash for mac&quot;&gt;&lt;/a&gt;Dash for mac&lt;/h2&gt;&lt;p&gt;Dash是一个API文档浏览器（ API
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Mac" scheme="http://flippedyue.github.io/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://flippedyue.github.io/2020/01/31/hello-world/"/>
+    <id>http://flippedyue.github.io/2020/01/31/hello-world/</id>
+    <published>2020-01-31T13:07:56.975Z</published>
+    <updated>2020-02-01T08:58:31.764Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
