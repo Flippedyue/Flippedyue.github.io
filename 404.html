@@ -457,16 +457,15 @@
             
             
             
-            <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
-                    class="white-color"></span>&nbsp;次
-            </span>
+                <span id="busuanzi_container_site_pv" style='display:none'>
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
             
             
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
-            </span>
+                <span id="busuanzi_container_site_uv" style='display:none'>
+                    人次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
             
             <br>
             
@@ -513,30 +512,25 @@
                 }
                 setInterval(siteTime, 1000);
             </script>
-
-            <script type="text/javascript">
-                var originalTitle = document.title;      // 1.
-                var crashSwitched = false;               // 2.
-                var titleTime;
-                document.addEventListener('visibilitychange', function () {
-                  if (document.hidden) {
-                    if (Math.random() < parseFloat({{ theme.crash_title_cheat.probability }})) {         // 3.
-                      crashSwitched = true;              // 2.a.
-                      document.title = '{{ theme.crash_title_cheat.crash_string }}' + originalTitle;     // 1.a.
-                      clearTimeout(titleTime);
-                    }
-                  } else {
-                    if (crashSwitched == true) {
-                      crashSwitched = false;             // 2.b.
-                      document.title = '{{ theme.crash_title_cheat.recover_string }}' + originalTitle;   // 1.b.
-                      titleTime = setTimeout(function () {
-                        document.title = originalTitle;  // 1.c.
-                      }, 2000);
-                    }
-                  }
-                });
-            </script>
+            <script>
+                $(document).ready(function () {
             
+                    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+                    var pvcountOffset = 80000;  // 初始化首次数据
+                    var uvcountOffset = 20000;
+            
+                    function fixCount() {
+                        if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                            clearInterval(int);
+                        }
+                        if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                            clearInterval(int); // 停止检测
+                        }
+                    }
+                });
+            </script>  
             
             <br>
             
