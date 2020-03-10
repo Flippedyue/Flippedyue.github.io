@@ -1,6 +1,15 @@
 <!DOCTYPE HTML>
 <html lang="default">
 
+<!-- <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?2e81c19bf45d1acd6f9efd2255c672c6";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>     -->
 
 <head>
     <meta charset="utf-8">
@@ -677,20 +686,23 @@
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">1.8k</span>&nbsp;字
             
             
             
             
             
-                <span id="busuanzi_container_site_pv" style='display:none'>
-                    <i class="fa fa-heart-o"></i>
-                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
-                </span>
+            
+                <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
             
             
-                <span id="busuanzi_container_site_uv" style='display:none'>
-                    人次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
-                </span>
+                <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
             
             <br>
             
@@ -741,8 +753,8 @@
                 $(document).ready(function () {
             
                     var int = setInterval(fixCount, 50);  // 50ms周期检测函数
-                    var pvcountOffset = 80000;  // 初始化首次数据
-                    var uvcountOffset = 20000;
+                    var pvcountOffset = 0;  // 初始化首次数据
+                    var uvcountOffset = 0;
             
                     function fixCount() {
                         if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
@@ -832,29 +844,8 @@ $(function () {
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
-<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-    gtag('config', '');
-</script>
-
 
     <!-- Baidu Analytics -->
-
-<script>
-    var _hmt = _hmt || [];
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
 
     <!-- Baidu Push -->
 
