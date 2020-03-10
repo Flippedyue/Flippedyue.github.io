@@ -167,3 +167,22 @@ $(function () {
             }
     });
 });
+window.onload = function() {
+    var OriginTitile = document.title;
+    var titleTime;
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) {
+        $('[rel="icon"]').attr('href', "../img/warning.ico");
+        $('[rel="shortcut icon"]').attr('href', "../img/warning.ico");//错误提示icon
+        document.title = '╭(°A°`)╮ 喔唷，崩溃啦~';
+        clearTimeout(titleTime);
+      } else {
+        $('[rel="icon"]').attr('href', "../img/snow.ico");//换成你自己的网页icon
+        $('[rel="shortcut icon"]').attr('href', "../img/snow.ico");
+        document.title = '(づ｡◕‿‿◕｡)づ 噫又好了~';
+        titleTime = setTimeout(function() {
+          document.title = OriginTitile;
+        }, 2000);
+      }
+    });
+}
